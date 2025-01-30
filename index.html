@@ -3,211 +3,290 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Victoria Rosenthal</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Overpass:wght@300&display=swap"
-      rel="stylesheet"
-    />
+    <title>Your Name - Personal Website</title>
     <style>
       body {
-        font-family: "Overpass", sans-serif;
-        font-weight: 300;
-        color: #5f6f52;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
         line-height: 1.6;
-        background-color: #fefae0;
+        margin: 0;
+        padding: 0;
+        color: #2d3436;
+        background: #f9f9f9;
       }
       header {
-        padding: 0.75rem;
+        background: #4b5320;
+        color: white;
+        padding: 1rem 1rem;
+        text-align: center;
+        position: relative;
+        background-image: linear-gradient(
+            rgba(75, 83, 32, 0.9),
+            rgba(75, 83, 32, 0.9)
+          ),
+          url('/api/placeholder/1200/400');
+        background-size: cover;
+        background-position: center;
       }
-      footer {
+      .profile-img {
+        width: 175px;
+        height: 175px;
+        border-radius: 50%;
+        border: 1px solid white;
+        margin-bottom: 0rem;
+        align-self: center;
+      }
+      nav {
+        /*background: #8B9355; */
         padding: 1rem;
+        text-align: left;
+        /*box-shadow: 0 2px 4px rgba(0,0,0,0.1);*/
       }
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem;
-      }
-      h1,
-      h2 {
-        font-family: "Tenor Sans", sans-serif;
-        color: #5f6f52;
-      }
-      .card {
-        background-color: #f9ebc7;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(95, 111, 82, 0.1);
-        transition: transform 0.3s ease;
-      }
-      .card:hover {
-        transform: translateY(-5px);
-      }
-      .social-links a {
-        margin-right: 1rem;
-        color: #b99470;
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+        font-weight: 500;
         transition: color 0.3s ease;
       }
-      .social-links a:hover {
-        color: #5f6f52;
+      nav a:hover {
+        color: #2d3436;
       }
-      .icon {
-        color: #a9b388;
-        margin-right: 0.5rem;
+      .main-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
       }
-      .skill-icon {
-        color: #b99470;
+
+      main {
+        flex: 1;
+        min-width: 300px;
       }
-      .bg-custom-green {
-        background-color: #626f47;
+      section {
+        padding: 3rem 2rem;
+        background: white;
+        border-radius: 8px;
+        margin-top: 2rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
       }
-      .text-custom-beige {
-        color: #fefae0;
+      aside {
+        width: 250px;
+        padding: 2rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        margin-top: 2rem;
+        height: fit-content;
+        font-size: small; /* or any size you prefer */
+        display: flex;
+        flex-direction: column;
       }
-      .text-custom-green {
-        color: #5f6f52;
+      .about text {
+        font-size: small; /* or any size you prefer */
       }
-      .border-custom-green {
-        border-color: #5f6f52;
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        gap: 2rem;
       }
-      .hover\:bg-custom-green:hover {
-        background-color: #5f6f52;
+      .project-card {
+        border: 1px solid #ddd;
+        padding: 1.5rem;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+        background: white;
       }
-      .border-custom-dark-green {
-        border-color: #626f47;
+      .project-card:hover {
+        transform: translateY(-5px);
       }
-      .max-w-custom {
-        max-width: 1024px;
+      footer {
+        background: #4b5320;
+        color: white;
+        text-align: center;
+        padding: 1.5rem;
+        margin-top: 3rem;
       }
-      .text-custom-brown {
-        color: #b99470;
+      .contact-links {
+        margin: 2rem 0;
+      }
+      .contact-links a {
+        margin: 0 1rem;
+        color: #4b5320;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .contact-links a:hover {
+        color: #8b9355;
+      }
+      h2 {
+        color: #4b5320;
+        border-bottom: 2px solid #8b9355;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+      @media (max-width: 1000px) {
+        .main-content {
+          flex-direction: column;
+        }
+        aside {
+          width: auto;
+          order: 2;
+        }
       }
     </style>
   </head>
   <body>
-    <div>
-      <header
-        class="flex justify-between items-center py-2 px-6 bg-custom-green text-custom-beige myheader"
-      >
-        <div class="flex items-center ml-4">
-          <img
-            src="images/profilepic_victoria.png"
-            alt="Victoria Rosenthal"
-            class="w-8 h-8 mr-3 rounded-full"
-          />
-          <h1 class="text-1xl font-bold text-custom-beige">
-            Victoria Rosenthal
-          </h1>
-        </div>
-        <a
-          href="#contact-me"
-          class="text-custom-beige border border-custom-beige px-4 py-2 rounded hover:bg-custom-beige hover:text-custom-green transition duration-300"
-          >Contact me</a
-        >
-      </header>
-      <img
-        src="images/header.jpeg"
-        alt="Header image"
-        class="w-full h-32 object-cover object-center"
-      />
-    </div>
-    <div class="max-w-custom mx-auto">
-      <div class="relative mb-6">
-        <div
-          class="flex items-end absolute bottom-0 right-0 transform translate-y-1/2"
-        >
-          <img
-            src="images/profilepic_victoria.png"
-            alt="Victoria Rosenthal"
-            class="w-48 h-48 rounded-full border-6 border-solid border-custom-dark-green"
-          />
-        </div>
-      </div>
-      <div class="ml-6 mb-14 max-w-custom mx-auto">
-        <h2 class="text-4xl font-bold">Hi, I'm Victoria</h2>
-        <p class="text-1xl text-custom-brown font-semibold">
-          Engineer | Project Manager | Sustainability Specialist
-        </p>
-      </div>
+    <header>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="main-content">
       <main>
-        <div class="mb-8">
-          <h2 class="text-2xl font-semibold mb-4">
-            <i class="fas fa-user icon"></i>About Me
-          </h2>
-          <p class="mb-4">
-            Engineer and sustainability specialist exploring the Web3
-            environment, merging tech, nature-based solutions and community
-            engagement for positive impact. At the heart of my career is a
-            vision for a sustainable future where technology empowers
-            communities and enhances environmental resilience.
-          </p>
-          <p class="mb-4">
-            My skills blend technical expertise with nature-positive ideas and
-            social impact.
-          </p>
-        </div>
-        <section class="mb-8">
-          <h2 class="text-2xl font-semibold mb-4">
-            <i class="fas fa-briefcase icon"></i>Professional Background
-          </h2>
-          <p class="mb-4">
-            Forest engineer with extensive experience in corporate
-            sustainability, I have spent years managing complex
-            multi-stakeholder projects focused on environmental stewardship and
-            community engagement in large multinational companies as well as
-            non-profit organizationsm, aligning economic development with
-            environmental and social stewardship.
-          </p>
-          <p class="mb-4">
-            My journey has led me to explore the transformative potential of
-            decentralized technologies, particularly in how they enhance trust,
-            traceability, and integration across systems.
-          </p>
+        <section id="projects">
+          <h2>Projects</h2>
+          <div class="projects">
+            <div class="project-card">
+              <h3>Trust Bonds</h3>
+              <p>Description of your first project.</p>
+            </div>
+            <div class="project-card">
+              <h3>project 2</h3>
+              <p>Description of your second project.</p>
+            </div>
+            <div class="project-card">
+              <h3>project 3</h3>
+              <p>Description of your second project.</p>
+            </div>
+          </div>
+          <div
+            style="display: flex; justify-content: flex-end; margin-top: 1rem"
+          >
+            <button id="show-more-projects">See more</button>
+          </div>
         </section>
 
-        <section class="mb-8">
-          <h2 class="text-2xl font-semibold mb-4">
-            <i class="fas fa-envelope icon"></i>Contact Me
-          </h2>
-          <p class="mb-4">
-            I am always open to new connections and opportunities to collaborate
-            on projects that bring tangible benefits to society and the
-            environment.
-          </p>
+        <section id="experience">
+          <h2>Experience</h2>
+          <div class="experience-item">
+            <p>Description of your role and key achievements.</p>
+          </div>
+        </section>
 
-          <p>Schedule some time with me through the link:</p>
-          <a
-            href="https://calendly.com/vc-rosenthal/30-min"
-            class="text-blue-600 hover:underline text-custom-brown"
-            >https://calendly.com/vc-rosenthal/30-min</a
+        <section id="blog">
+          <h2>Blog</h2>
+          <div class="projects">
+            <div class="project-card">
+              <img
+                src="/api/placeholder/400/200"
+                alt="Blog post image"
+                style="
+                  width: 100%;
+                  height: 200px;
+                  object-fit: cover;
+                  border-radius: 4px;
+                "
+              />
+              <h3 style="margin-top: 1rem">Latest Post Title</h3>
+              <span style="color: #8b9355; font-size: 0.9rem"
+                >December 15, 2023</span
+              >
+              <p>
+                Short description of your blog post goes here. This can be a
+                brief excerpt from the full article.
+              </p>
+              <a
+                href="#"
+                style="
+                  color: #4b5320;
+                  text-decoration: none;
+                  display: inline-block;
+                  margin-top: 1rem;
+                "
+                >Read More →</a
+              >
+            </div>
+            <div class="project-card">
+              <img
+                src="/api/placeholder/400/200"
+                alt="Blog post image"
+                style="
+                  width: 100%;
+                  height: 200px;
+                  object-fit: cover;
+                  border-radius: 4px;
+                "
+              />
+              <h3 style="margin-top: 1rem">Another Blog Post</h3>
+              <span style="color: #8b9355; font-size: 0.9rem"
+                >December 1, 2023</span
+              >
+              <p>
+                Another blog post description. Keep it concise but informative
+                to attract readers.
+              </p>
+              <a
+                href="#"
+                style="
+                  color: #4b5320;
+                  text-decoration: none;
+                  display: inline-block;
+                  margin-top: 1rem;
+                "
+                >Read More →</a
+              >
+            </div>
+          </div>
+          <div
+            style="display: flex; justify-content: flex-end; margin-top: 1rem"
           >
+            <button id="show-more-projects">See more</button>
+          </div>
+        </section>
+
+        <section id="contact">
+          <h2>Contact</h2>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/victoriarosenthal/"
+              >LinkedIn</a
+            >
+            <a href="https://github.com/viccrosenthal">GitHub</a>
+            <a href="https://calendly.com/vc-rosenthal"
+              >Schedule some time with me</a
+            >
+          </div>
         </section>
       </main>
+
+      <aside>
+        <h2>About me</h2>
+        <img
+          src="images/profilepic_victoria2.png"
+          alt="Your Profile"
+          class="profile-img"
+        />
+        <p>
+          Engineer and sustainability specialist exploring the Web3 environment
+          and innovative solutions, with skills blending technical expertise
+          with nature-positive ideas and social impact.
+        </p>
+        <p>
+          At the heart of my career is a vision for a sustainable future where
+          technology empowers communities and enhances environmental resilience.
+        </p>
+      </aside>
     </div>
-    <footer
-      class="text-center mt-12 bg-custom-green text-custom-beige"
-    >
-      <div class="social-links">
-        <a
-          href="https://www.linkedin.com/in/victoriarosenthal/"
-          class="text-2xl font-bold text-custom-beige"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        <a
-          href="https://github.com/viccrosenthal"
-          class="text-2xl font-bold text-custom-beige"
-          ><i class="fab fa-github"></i
-        ></a>
-      </div>
-      <p>
-        <strong>&copy; 2024 Victoria Rosenthal. All rights reserved.</strong>
-      </p>
+
+    <footer>
+      <p>© 2024 Victoria Rosenthal. All rights reserved.</p>
     </footer>
   </body>
 </html>
