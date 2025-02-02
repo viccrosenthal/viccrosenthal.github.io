@@ -6,11 +6,10 @@
     <title>Your Name - Personal Website</title>
     <style>
       main {
-        max-width: 860px;
+        max-width: 560px;
       }
       body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-          Oxygen, Ubuntu, Cantarell, sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         line-height: 1.6;
         margin: 0;
         padding: 0;
@@ -23,11 +22,7 @@
         padding: 1rem 1rem;
         text-align: center;
         position: relative;
-        background-image: linear-gradient(
-            rgba(75, 83, 32, 0.9),
-            rgba(75, 83, 32, 0.9)
-          ),
-          url('/api/placeholder/1200/400');
+        background-image: linear-gradient(rgba(75, 83, 32, 0.9), rgba(75, 83, 32, 0.9)), url('/api/placeholder/1200/400');
         background-size: cover;
         background-position: center;
       }
@@ -37,7 +32,7 @@
         border-radius: 50%;
         border: 1px solid white;
         margin-bottom: 0rem;
-        align-self: center;
+        align-self: left;
       }
       nav {
         /*background: #8B9355; */
@@ -76,6 +71,14 @@
         margin-top: 2rem;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
       }
+      @media (max-width: 600px) {
+        section {
+          padding: 1rem;
+        }
+        .main-content {
+          padding: 1rem;
+        }
+      }
       aside {
         width: 250px;
         padding: 2rem;
@@ -107,8 +110,8 @@
         transform: translateY(-5px);
       }
       footer {
-        background: #4b5320;
-        color: white;
+        /* background: #4b5320;
+        color: white; */
         text-align: center;
         padding: 1.5rem;
         margin-top: 3rem;
@@ -161,21 +164,25 @@
       <main>
         <section>
           <h1>Victoria Rosenthal</h1>
-          <img
-            src="images/profilepic_victoria2.png"
-            alt="Your Profile"
-            class="profile-img"
-          />
+          <div style="display: flex; width: 100%; justify-content: center">
+            <img src="images/profilepic_victoria2.png" alt="Your Profile" class="profile-img" />
+          </div>
           <p>
-            Engineer and sustainability specialist exploring the Web3
-            environment and innovative solutions, with skills blending technical
-            expertise with nature-positive ideas and social impact.
+            Engineer and sustainability specialist exploring the Web3 environment and innovative solutions, with skills blending technical expertise with
+            nature-positive ideas and social impact.
+            <!-- </p>
+          <p>As a native gaucha, born and raised in the vast open grasslands of the Pampas, 
+            my love for our natural heritage has been a defining part of who I am. </p>
+        </p> -->
           </p>
+
           <p>
-            At the heart of my career is a vision for a sustainable future where
-            technology empowers communities and enhances environmental
-            resilience.
+            I combine Project Management and Data Analytics core skills. Using a data-driven and stakeholder-focused approach, I have enhanced ESG strategies by
+            optimizing sustainability information tracking and reporting at a national level; and conducted short-term continuous improvement projects that led
+            the company to achieve up to 100% compliance in external audits.
           </p>
+
+          <p>At the heart of my career is a vision for a sustainable future where technology empowers communities and enhances environmental resilience.</p>
         </section>
 
         <!-- <section id="projects">
@@ -202,9 +209,20 @@
         </section> -->
 
         <section id="experience">
-          <h2>Experience</h2>
+          <h2>Recent experiences and projetcs</h2>
           <div class="experience-item">
-            <p>Description of your role and key achievements.</p>
+            <h3>KBX - Kernel Fellowship</h3>
+            <p>.</p>
+            <h3>Trust Bonds</h3>
+            <p>
+              <a href="https://leomoura.org/trust-bonds/">Trust Bonds</a> is a public good initiative created by Kernel fellows, introducing a novel approach to
+              establishing and verifying trust in monetary bonds between individuals within the Web3 environment. This incentivizes coordination, allowing
+              participants to earn a higher-than-market-average yield on their savings, creating a new primitive for social reputation.
+            </p>
+            <h3>Trust Bonds</h3>
+            <p>.</p>
+            <h3>Trust Bonds</h3>
+            <p>.</p>
           </div>
         </section>
         <!-- 
@@ -282,13 +300,10 @@
         <section id="contact">
           <h2>Contact</h2>
           <div class="contact-links">
-            <a href="https://www.linkedin.com/in/victoriarosenthal/"
-              >LinkedIn</a
-            >
             <a href="https://github.com/viccrosenthal">GitHub</a>
-            <a href="https://calendly.com/vc-rosenthal"
-              >Schedule some time with me</a
-            >
+            <a href="https://x.com/vicrosenthal">𝕏</a>
+            <a href="https://www.linkedin.com/in/victoriarosenthal/">LinkedIn</a>
+            <a href="https://calendly.com/vc-rosenthal">Schedule some time with me</a>
           </div>
         </section>
       </main>
